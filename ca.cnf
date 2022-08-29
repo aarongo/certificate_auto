@@ -1,14 +1,14 @@
 [ ca ]
-default_ca = Nexus_ROOT_CA
+default_ca = Genesis_ROOT_CA
 
-[ Nexus_ROOT_CA ]
+[ Genesis_ROOT_CA ]
 new_certs_dir   = ./out/newcerts
 certificate     = ./out/root.crt
 database        = ./out/index.txt
 private_key     = ./out/root.key.pem
 serial          = ./out/serial
 unique_subject  = no
-default_days    = 730
+default_days    = 3560
 default_md      = sha256
 policy          = policy_loose
 x509_extensions = ca_extensions
@@ -58,7 +58,7 @@ emailAddress                    = Email Address
 countryName_default             = CN
 stateOrProvinceName_default     = Guangdong
 localityName_default            = Shenzhen
-0.organizationName_default      = Nexus
+0.organizationName_default      = Genesis
 organizationalUnitName_default  =
 emailAddress_default            =
 

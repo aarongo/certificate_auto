@@ -3,7 +3,7 @@
 if [ -z "$1" ]
 then
     echo
-    echo '使用 Nexus CA 颁发泛域名证书'
+    echo '使用 Genesis CA 颁发泛域名证书'
     echo
     echo 'Usage: ./gen.cert.sh <domain> <domain2> <domain3> <domain4> ...'
     echo '    <domain>          输入网站域名, 例如 "example.dev",'
@@ -44,7 +44,7 @@ openssl req -new -out "${DIR}/$1.csr.pem" \
     -reqexts SAN \
     -config <(cat ca.cnf \
         <(printf "[SAN]\nsubjectAltName=${SAN}")) \
-    -subj "/C=CN/ST=Guangdong/L=Shenzhen/O=Nexus/OU=$1/CN=*.$1"
+    -subj "/C=CN/ST=Guangdong/L=Shenzhen/O=Genesis/OU=$1/CN=*.$1"
 
 # 颁发证书
 # 使用自签署的 CA 证书签署服务器 CSR 证书请求
